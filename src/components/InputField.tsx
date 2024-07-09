@@ -10,12 +10,10 @@ export default function InputField({
 }: FormFieldProps) {
   return (
     <>
-      <div className="m-5 text-center flex align-middle justify-between w-full">
-        <label className="w-[25%] text-left text-slate-800 text-[18px] font-bold font-mono">
-          {name}
-        </label>
+      <div className="w-full my-5 flex justify-between">
+        <label className="flex-1 text-lg tracking-wider font-palanquin leading-normal">{name}</label>
         <input
-          className="w-[70%] px-2 mr-2 text-sm bg-slate-400 text-white focus:outline-none rounded-md"
+          className="flex-2 input"
           type={type}
           placeholder={placeholder}
           disabled={disabled}
@@ -23,14 +21,8 @@ export default function InputField({
         />
       </div>
 
-      <div className="text-red-600 text-center text-sm">
-        <small
-          style={{
-            color: "red",
-          }}
-        >
-          {error && error?.message}
-        </small>
+      <div className="text-red-400 text-sm font-montserrat">
+        <small>{error && error?.message}</small>
       </div>
     </>
   );

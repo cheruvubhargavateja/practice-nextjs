@@ -32,11 +32,10 @@ export default function Register() {
   };
 
   return (
-    <section className="w-full flex align-middle justify-center mt-[10%]">
+    <section className="px-10 w-full flex justify-center items-center mt-[15%]">
       <form
         onSubmit={handleSubmit(submitHandler)}
-        className="rounded-lg flex flex-col align-middle justify-center
-        px-8 py-5 text-black text-lg bg-slate-300 w-[30%] shadow-lg shadow-slate-500"
+        className="w-1/4 shadow-xl px-10 py-5 flex flex-col justify-center items-center rounded-xl"
       >
         <InputField
           name="username"
@@ -62,7 +61,8 @@ export default function Register() {
           error={errors.password}
         />
 
-        <button className="mt-5 py-2 bg-slate-800 text-white rounded-lg hover:bg-slate-600">
+        <button className="w-full bg-coral-red text-lg
+        font-semibold tracking-widest rounded-full px-10 py-2 text-white leading-normal mt-5">
           Register
         </button>
       </form>
